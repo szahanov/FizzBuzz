@@ -10,15 +10,10 @@ I take the data and use the Random Forest, K Nearest Neighbour, and Support Vect
 # Quick Results #
 
 ### End result ###
-* This is the end result. The random forest model was the most useful, with high accuracy and a high kappa coefficient:  
 
+* After making the three models, these are the results. The random forest model was the most useful, with high accuracy and a high kappa coefficient:  
+* rf = Random Forest, knn = K Nearest Nieghbour algorithm, SVM = Supporting Vector algorithm
 ![results chart](https://bytebucket.org/szahanov/fizzbuzz/raw/master/charts/dotplot1.png "Results for each model")
-
-* Doing a scatterplot of the data based on different classes of images it looks like I should be able to work with this data and successfully classify the images:
-
-![scatterplot chart](https://bytebucket.org/szahanov/fizzbuzz/raw/master/charts/scatterplot1.png)
-
-* Each coloured group of points is a different category (e.g. brickface, sky, foliage, etc). Since they don't always overlap I get the impression that I can work with this.
 
 * After cleaning the data and running each of a Random Forest, a K Nearest Neighbour, and a Support Vector Machine algorithm on it, I was able to correctly classify the data with decent accuracy and sensitivity.
 
@@ -72,12 +67,13 @@ I take the data and use the Random Forest, K Nearest Neighbour, and Support Vect
 
 # Steps #
 
-* See the full code here:  
+* See the full code to see each step, it is commented pretty well.
 https://bitbucket.org/szahanov/fizzbuzz/src/master/image_classification.R
 
 ### Visualizing the data ###
 
-* These are the plots that were created to visualize the diffrent image classes before creating models:
+* These are the plots that were created to visualize the diffrent image classes before creating the prediction models:  
+* Each coloured group of points is a different category (e.g. brickface, sky, foliage, etc). Since they don't always overlap I get the impression that I can work with this.  
 
 * Box and whisker plots to show that the variables I'm using vary depending on the image type  
 ![boxplot chart](https://bytebucket.org/szahanov/fizzbuzz/raw/master/charts/boxplot3.png "Box plot")
@@ -86,18 +82,14 @@ https://bitbucket.org/szahanov/fizzbuzz/src/master/image_classification.R
 ![density plot](https://bytebucket.org/szahanov/fizzbuzz/raw/master/charts/densityplot1.png "Density plot")
 
 * This scatter plot shows more dimensions, here we can see that there are cases where there is little overlap between image types when looking at the colour variables:  
-![scatterplot chart](https://bytebucket.org/szahanov/fizzbuzz/raw/master/charts/scatterplot1.png "Scatterplot")
+![scatterplot chart](https://bytebucket.org/szahanov/fizzbuzz/raw/master/charts/scatterplot1.png)
 
-### Looking at the results ###
-
-* After making the three models, these are the results.
-
-* rf = Random Forest, knn = K Nearest Nieghbour algorithm, SVM = Supporting Vector algorithm
-
-![results chart](https://bytebucket.org/szahanov/fizzbuzz/raw/master/charts/dotplot1.png "Results for each model")
+* At first glance it looks like I should be able to work with this data and successfully classify the images.
 
 # Links #
 
-* [R code](https://bitbucket.org/tutorials/markdowndemo)
+* [R code](https://bitbucket.org/szahanov/fizzbuzz/src/master/image_classification.R)
 
-* [data](https://bitbucket.org/tutorials/markdowndemo)
+* [data](https://bitbucket.org/szahanov/fizzbuzz/src/master/segmentation_modified.data?at=master&fileviewer=file-view-default)
+
+* [charts](https://bitbucket.org/szahanov/fizzbuzz/src/master/charts/)
