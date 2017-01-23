@@ -93,3 +93,5 @@ https://bitbucket.org/szahanov/fizzbuzz/src/master/image_classification.R
 * [Data](https://bitbucket.org/szahanov/fizzbuzz/src/master/segmentation_modified.data?at=master&fileviewer=file-view-default)
 
 * [Charts](https://bitbucket.org/szahanov/fizzbuzz/src/master/charts/)
+
+* [Original data source](https://archive.ics.uci.edu/ml/datasets/Image+Segmentation)
