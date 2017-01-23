@@ -7,71 +7,92 @@ That has data for images that fall into 7 categories: brickface, sky, foliage, c
 
 I take the data and use the Random Forest, K Nearest Neighbour, and Support Vector Machine algorithms to find out which class each image belongs to.
 
-### End Results ###
+### Quick Results ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* Doing a scatterplot of the data based on different classes of images it looks like I should be able to work with this data and successfully classify the images:
 
+![scatterplot chart](https://bytebucket.org/szahanov/fizzbuzz/raw/84a520f5b4471a88961ac8ee59d8ac9c84e350b0/charts/scatterplot1.png)
 
-* From the R code:
+* Each coloured group of points is a different category (e.g. brickface, sky, foliage, etc). Since they don't always overlap I get the impression that I can work with this.
+
+* After cleaning the data and running each of a Random Forest, a K Nearest Neighbour, and a Support Vector Machine algorithm on it, I was able to correctly classify the data with decent accuracy and sensitivity.
+
+* These are the results of the Random Forest model. This shows the predicions vs. the test data, with very good results. With a larger training data set I think the three misclassifications would go away.
 
 > # test the model
 > predictions <- predict(fit.rf, validation)
 > confusionMatrix(predictions, validation$ImageBackground)
-Confusion Matrix and Statistics
+> Confusion Matrix and Statistics
 
-           Reference
-Prediction  BRICKFACE CEMENT FOLIAGE GRASS PATH SKY WINDOW
-  BRICKFACE         5      1       0     0    0   0      1
-  CEMENT            0      4       0     0    0   0      0
-  FOLIAGE           0      0       6     0    0   0      0
-  GRASS             0      0       0     6    0   0      0
-  PATH              0      0       0     0    6   0      0
-  SKY               0      0       0     0    0   6      0
-  WINDOW            0      1       0     0    0   0      5
+>            Reference
+> Prediction  BRICKFACE CEMENT FOLIAGE GRASS PATH SKY WINDOW
+>   BRICKFACE         5      1       0     0    0   0      1
+>   CEMENT            0      4       0     0    0   0      0
+>   FOLIAGE           0      0       6     0    0   0      0
+>   GRASS             0      0       0     6    0   0      0
+>   PATH              0      0       0     0    6   0      0
+>   SKY               0      0       0     0    0   6      0
+>   WINDOW            0      1       0     0    0   0      5
 
-Overall Statistics
+> Overall Statistics
                                           
-               Accuracy : 0.9268          
-                 95% CI : (0.8008, 0.9846)
-    No Information Rate : 0.1463          
-    P-Value [Acc > NIR] : < 2.2e-16       
+>                Accuracy : 0.9268          
+>                  95% CI : (0.8008, 0.9846)
+>     No Information Rate : 0.1463          
+>     P-Value [Acc > NIR] : < 2.2e-16       
                                           
-                  Kappa : 0.9147          
- Mcnemar's Test P-Value : NA              
+>                   Kappa : 0.9147          
+>  Mcnemar's Test P-Value : NA              
 
-Statistics by Class:
+> Statistics by Class:
 
-                     Class: BRICKFACE Class: CEMENT Class: FOLIAGE
-Sensitivity                    1.0000       0.66667         1.0000
-Specificity                    0.9444       1.00000         1.0000
-Pos Pred Value                 0.7143       1.00000         1.0000
-Neg Pred Value                 1.0000       0.94595         1.0000
-Prevalence                     0.1220       0.14634         0.1463
-Detection Rate                 0.1220       0.09756         0.1463
-Detection Prevalence           0.1707       0.09756         0.1463
-Balanced Accuracy              0.9722       0.83333         1.0000
-                     Class: GRASS Class: PATH Class: SKY Class: WINDOW
-Sensitivity                1.0000      1.0000     1.0000        0.8333
-Specificity                1.0000      1.0000     1.0000        0.9714
-Pos Pred Value             1.0000      1.0000     1.0000        0.8333
-Neg Pred Value             1.0000      1.0000     1.0000        0.9714
-Prevalence                 0.1463      0.1463     0.1463        0.1463
-Detection Rate             0.1463      0.1463     0.1463        0.1220
-Detection Prevalence       0.1463      0.1463     0.1463        0.1463
-Balanced Accuracy          1.0000      1.0000     1.0000        0.9024
+>                      Class: BRICKFACE Class: CEMENT Class: FOLIAGE
+> Sensitivity                    1.0000       0.66667         1.0000
+> Specificity                    0.9444       1.00000         1.0000
+> Pos Pred Value                 0.7143       1.00000         1.0000
+> Neg Pred Value                 1.0000       0.94595         1.0000
+> Prevalence                     0.1220       0.14634         0.1463
+> Detection Rate                 0.1220       0.09756         0.1463
+> Detection Prevalence           0.1707       0.09756         0.1463
+> Balanced Accuracy              0.9722       0.83333         1.0000
+>                      Class: GRASS Class: PATH Class: SKY Class: WINDOW
+> Sensitivity                1.0000      1.0000     1.0000        0.8333
+> Specificity                1.0000      1.0000     1.0000        0.9714
+> Pos Pred Value             1.0000      1.0000     1.0000        0.8333
+> Neg Pred Value             1.0000      1.0000     1.0000        0.9714
+> Prevalence                 0.1463      0.1463     0.1463        0.1463
+> Detection Rate             0.1463      0.1463     0.1463        0.1220
+> Detection Prevalence       0.1463      0.1463     0.1463        0.1463
+> Balanced Accuracy          1.0000      1.0000     1.0000        0.9024
 
 ### Steps ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* See the full code here:
+https://bitbucket.org/szahanov/fizzbuzz/src/3fe127f0f260cead7362e045edfab4b84220c412/image_classification.R?at=master&fileviewer=file-view-default
+
+# Visualizing the data #
+
+* These are the plots that were created to visualize the diffrent image classes before creating models:
+
+* Box and whisker plots to show that the variables I'm using vary depending on the image type
+![boxplot chart](https://bytebucket.org/szahanov/fizzbuzz/raw/84a520f5b4471a88961ac8ee59d8ac9c84e350b0/charts/boxplot3.png "Box plot")
+
+* This density plot shows basically the same thing but it's easier to see how much the image classes overlap with each other:
+![density plot](https://bytebucket.org/szahanov/fizzbuzz/raw/3fe127f0f260cead7362e045edfab4b84220c412/charts/densityplot1.png "Density plot")
+
+* This scatter plot shows more dimensions, here we can see that there are cases where there is little overlap between image types when looking at the colour variables:
+![scatterplot chart](https://bytebucket.org/szahanov/fizzbuzz/raw/84a520f5b4471a88961ac8ee59d8ac9c84e350b0/charts/scatterplot1.png "Scatterplot")
+
+# Looking at the results #
+
+* After making the three models, these are the results.
+
+* rf = Random Forest, knn = K Nearest Nieghbour algorithm, SVM = Supporting Vector algorithm
+
+![results chart](https://bytebucket.org/szahanov/fizzbuzz/raw/84a520f5b4471a88961ac8ee59d8ac9c84e350b0/charts/dotplot1.png "Results for each model")
 
 ### Links ###
 
-[R code](https://bitbucket.org/tutorials/markdowndemo)
-[data](https://bitbucket.org/tutorials/markdowndemo)
+* [R code](https://bitbucket.org/tutorials/markdowndemo)
+
+* [data](https://bitbucket.org/tutorials/markdowndemo)
