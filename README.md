@@ -11,7 +11,7 @@ I take the data and use the Random Forest, K Nearest Neighbour, and Support Vect
 
 * Doing a scatterplot of the data based on different classes of images it looks like I should be able to work with this data and successfully classify the images:
 
-![scatterplot chart](https://bytebucket.org/szahanov/fizzbuzz/raw/84a520f5b4471a88961ac8ee59d8ac9c84e350b0/charts/scatterplot1.png)
+![scatterplot chart](https://bytebucket.org/szahanov/fizzbuzz/raw/master/charts/scatterplot1.png)
 
 * Each coloured group of points is a different category (e.g. brickface, sky, foliage, etc). Since they don't always overlap I get the impression that I can work with this.
 
@@ -75,13 +75,13 @@ https://bitbucket.org/szahanov/fizzbuzz/src/3fe127f0f260cead7362e045edfab4b84220
 * These are the plots that were created to visualize the diffrent image classes before creating models:
 
 * Box and whisker plots to show that the variables I'm using vary depending on the image type
-![boxplot chart](https://bytebucket.org/szahanov/fizzbuzz/raw/84a520f5b4471a88961ac8ee59d8ac9c84e350b0/charts/boxplot3.png "Box plot")
+![boxplot chart](https://bytebucket.org/szahanov/fizzbuzz/raw/master/charts/boxplot3.png "Box plot")
 
 * This density plot shows basically the same thing but it's easier to see how much the image classes overlap with each other:
-![density plot](https://bytebucket.org/szahanov/fizzbuzz/raw/3fe127f0f260cead7362e045edfab4b84220c412/charts/densityplot1.png "Density plot")
+![density plot](https://bytebucket.org/szahanov/fizzbuzz/raw/master/charts/densityplot1.png "Density plot")
 
 * This scatter plot shows more dimensions, here we can see that there are cases where there is little overlap between image types when looking at the colour variables:
-![scatterplot chart](https://bytebucket.org/szahanov/fizzbuzz/raw/84a520f5b4471a88961ac8ee59d8ac9c84e350b0/charts/scatterplot1.png "Scatterplot")
+![scatterplot chart](https://bytebucket.org/szahanov/fizzbuzz/raw/master/charts/scatterplot1.png "Scatterplot")
 
 # Looking at the results #
 
@@ -89,7 +89,7 @@ https://bitbucket.org/szahanov/fizzbuzz/src/3fe127f0f260cead7362e045edfab4b84220
 
 * rf = Random Forest, knn = K Nearest Nieghbour algorithm, SVM = Supporting Vector algorithm
 
-![results chart](https://bytebucket.org/szahanov/fizzbuzz/raw/84a520f5b4471a88961ac8ee59d8ac9c84e350b0/charts/dotplot1.png "Results for each model")
+![results chart](https://bytebucket.org/szahanov/fizzbuzz/raw/master/charts/dotplot1.png "Results for each model")
 
 ### Links ###
 
