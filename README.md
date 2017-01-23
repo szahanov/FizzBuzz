@@ -11,7 +11,7 @@ I take the data and use the Random Forest, K Nearest Neighbour, and Support Vect
 
 ### End result ###
 
-* After cleaning the data and running each of Random Forest, K Nearest Neighbour, and Support Vector algorithms on it, I was able to correctly classify the data with good accuracy and sensitivity.
+* After cleaning the data and running each of Random Forest, K Nearest Neighbour, and Support Vector algorithms on it, I was able to correctly classify the images with good accuracy and sensitivity.
 
 * These are the results for the three models. The random forest model was the most useful, with high accuracy and a high kappa coefficient:  
 * rf = Random Forest, knn = K Nearest Nieghbour algorithm, SVM = Supporting Vector algorithm  
