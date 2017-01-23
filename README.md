@@ -19,20 +19,17 @@ I take the data and use the Random Forest, K Nearest Neighbour, and Support Vect
 
 * These are the results of the Random Forest model. This shows the predictions vs. the test data, with very good results. With a larger training data set I think the three misclassifications would go away.
 
-> # test the model
-> predictions <- predict(fit.rf, validation)
-> confusionMatrix(predictions, validation$ImageBackground)
-> Confusion Matrix and Statistics
 
->            Reference
-> Prediction  BRICKFACE CEMENT FOLIAGE GRASS PATH SKY WINDOW  
->   BRICKFACE         5      1       0     0    0   0      1  
->   CEMENT            0      4       0     0    0   0      0  
->   FOLIAGE           0      0       6     0    0   0      0  
->   GRASS             0      0       0     6    0   0      0  
->   PATH              0      0       0     0    6   0      0  
->   SKY               0      0       0     0    0   6      0  
->   WINDOW            0      1       0     0    0   0      5  
+            |Reference
+Prediction |BRICKFACE |CEMENT |FOLIAGE |GRASS |PATH |SKY |WINDOW
+-------------------------------------------------------------
+  BRICKFACE         |5      |1       |0     |0    |0   |0      |1
+  CEMENT            |0      |4       |0     |0    |0   |0      |0
+  FOLIAGE           |0      |0       |6     |0    |0   |0      |0
+  GRASS             |0      |0       |0     |6    |0   |0      |0
+  PATH              |0      |0       |0     |0    |6   |0      |0
+  SKY               |0      |0       |0     |0    |0   |6      |0
+  WINDOW            |0      |1       |0     |0    |0   |0      |5
 
 > Overall Statistics
                                           
@@ -46,24 +43,26 @@ I take the data and use the Random Forest, K Nearest Neighbour, and Support Vect
 
 > Statistics by Class:
 
->                      Class: BRICKFACE Class: CEMENT Class: FOLIAGE  
-> Sensitivity                    1.0000       0.66667         1.0000  
-> Specificity                    0.9444       1.00000         1.0000  
-> Pos Pred Value                 0.7143       1.00000         1.0000  
-> Neg Pred Value                 1.0000       0.94595         1.0000  
-> Prevalence                     0.1220       0.14634         0.1463  
-> Detection Rate                 0.1220       0.09756         0.1463  
-> Detection Prevalence           0.1707       0.09756         0.1463  
-> Balanced Accuracy              0.9722       0.83333         1.0000  
->                      Class: GRASS Class: PATH Class: SKY Class: WINDOW  
-> Sensitivity                1.0000      1.0000     1.0000        0.8333  
-> Specificity                1.0000      1.0000     1.0000        0.9714  
-> Pos Pred Value             1.0000      1.0000     1.0000        0.8333  
-> Neg Pred Value             1.0000      1.0000     1.0000        0.9714  
-> Prevalence                 0.1463      0.1463     0.1463        0.1463  
-> Detection Rate             0.1463      0.1463     0.1463        0.1220  
-> Detection Prevalence       0.1463      0.1463     0.1463        0.1463  
-> Balanced Accuracy          1.0000      1.0000     1.0000        0.9024  
+                     |Class: BRICKFACE |Class: CEMENT |Class: FOLIAGE
+-----------------------------------------------------------------
+Sensitivity                    |1.0000       |0.66667         |1.0000  
+Specificity                    |0.9444       |1.00000         |1.0000  
+Pos Pred Value                 |0.7143       |1.00000         |1.0000  
+Neg Pred Value                 |1.0000       |0.94595         |1.0000  
+Prevalence                     |0.1220       |0.14634         |0.1463  
+Detection Rate                 |0.1220       |0.09756         |0.1463  
+Detection Prevalence           |0.1707       |0.09756         |0.1463  
+Balanced Accuracy              |0.9722       |0.83333         |1.0000  
+                     |Class: GRASS |Class: PATH |Class: SKY |Class: WINDOW
+-----------------------------------------------------------------
+Sensitivity                |1.0000      |1.0000     |1.0000        |0.8333  
+Specificity                |1.0000      |1.0000     |1.0000        |0.9714  
+Pos Pred Value             |1.0000      |1.0000     |1.0000        |0.8333  
+Neg Pred Value             |1.0000      |1.0000     |1.0000        |0.9714  
+Prevalence                 |0.1463      |0.1463     |0.1463        |0.1463  
+Detection Rate             |0.1463      |0.1463     |0.1463        |0.1220  
+Detection Prevalence       |0.1463      |0.1463     |0.1463        |0.1463  
+Balanced Accuracy          |1.0000      |1.0000     |1.0000        |0.9024  
 
 # Steps #
 
