@@ -11,18 +11,18 @@ I take the data and use the Random Forest, K Nearest Neighbour, and Support Vect
 
 ### End result ###
 
-* After making the three models, these are the results. The random forest model was the most useful, with high accuracy and a high kappa coefficient:  
-* rf = Random Forest, knn = K Nearest Nieghbour algorithm, SVM = Supporting Vector algorithm
-![results chart](https://bytebucket.org/szahanov/fizzbuzz/raw/master/charts/dotplot1.png "Results for each model")
+* After cleaning the data and running each of Random Forest, K Nearest Neighbour, and Support Vector algorithms on it, I was able to correctly classify the data with good accuracy and sensitivity.
 
-* After cleaning the data and running each of a Random Forest, a K Nearest Neighbour, and a Support Vector Machine algorithm on it, I was able to correctly classify the data with decent accuracy and sensitivity.
+* These are the results for the three models. The random forest model was the most useful, with high accuracy and a high kappa coefficient:  
+* rf = Random Forest, knn = K Nearest Nieghbour algorithm, SVM = Supporting Vector algorithm  
+
+![results chart](https://bytebucket.org/szahanov/fizzbuzz/raw/master/charts/dotplot1.png "Results for each model")
 
 * These are the results of the Random Forest model. This shows the predictions vs. the test data, with very good results. With a larger training data set I think the three misclassifications would go away.
 
-
-Results Matrix|Reference||||||
-Prediction |BRICKFACE |CEMENT |FOLIAGE |GRASS |PATH |SKY |WINDOW
+Results Matrix|Reference|. |. |. |. |. |.
 -----------|----------|-------|--------|------|-----|----|-------
+Prediction |BRICKFACE |CEMENT |FOLIAGE |GRASS |PATH |SKY |WINDOW
 BRICKFACE         |5      |1       |0     |0    |0   |0      |1
 CEMENT            |0      |4       |0     |0    |0   |0      |0
 FOLIAGE           |0      |0       |6     |0    |0   |0      |0
@@ -72,7 +72,7 @@ https://bitbucket.org/szahanov/fizzbuzz/src/master/image_classification.R
 
 ### Visualizing the data - before modelling ###
 
-* These are the plots that were created to visualize the diffrent image classes before creating the prediction models:  
+* These are the plots that were created to visualize the different image classes before creating the prediction models:  
 * Each coloured group of points is a different category (e.g. brickface, sky, foliage, etc). Since they don't always overlap I get the impression that I can work with this.  
 
 * Box and whisker plots to show that the variables I'm using vary depending on the image type  
