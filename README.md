@@ -1,6 +1,6 @@
 # Predicting image types using three different classification/regression algorithms #
 
-This work is inspired by the idea of a [FizzBuzz program](https://imranontech.com/2007/01/24/using-fizzbuzz-to-find-developers-who-grok-coding/) used to find hirable developers, I was wondering what the data science equivalent of a Fizz Buzz program would be and did this.
+This work is inspired by the idea of a [FizzBuzz program](https://imranontech.com/2007/01/24/using-fizzbuzz-to-find-developers-who-grok-coding/) used to find hirable developers, I was wondering what the data science equivalent of a FizzBuzz program would be and did this.
 
 Data is taken from here: https://archive.ics.uci.edu/ml/datasets/Image+Segmentation  
 That has data for images that fall into 7 categories: brickface, sky, foliage, cement, window, path, and grass
@@ -90,6 +90,6 @@ https://bitbucket.org/szahanov/fizzbuzz/src/master/image_classification.R
 
 * [R code](https://bitbucket.org/szahanov/fizzbuzz/src/master/image_classification.R)
 
-* [data](https://bitbucket.org/szahanov/fizzbuzz/src/master/segmentation_modified.data?at=master&fileviewer=file-view-default)
+* [Data](https://bitbucket.org/szahanov/fizzbuzz/src/master/segmentation_modified.data?at=master&fileviewer=file-view-default)
 
-* [charts](https://bitbucket.org/szahanov/fizzbuzz/src/master/charts/)
+* [Charts](https://bitbucket.org/szahanov/fizzbuzz/src/master/charts/)
