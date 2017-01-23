@@ -20,9 +20,9 @@ I take the data and use the Random Forest, K Nearest Neighbour, and Support Vect
 * These are the results of the Random Forest model. This shows the predictions vs. the test data, with very good results. With a larger training data set I think the three misclassifications would go away.
 
 
-            |Reference
+|Reference||||||
 Prediction |BRICKFACE |CEMENT |FOLIAGE |GRASS |PATH |SKY |WINDOW
--------------------------------------------------------------
+-----------|----------|-------|--------|------|-----|----|-------
   BRICKFACE         |5      |1       |0     |0    |0   |0      |1
   CEMENT            |0      |4       |0     |0    |0   |0      |0
   FOLIAGE           |0      |0       |6     |0    |0   |0      |0
@@ -44,7 +44,7 @@ Prediction |BRICKFACE |CEMENT |FOLIAGE |GRASS |PATH |SKY |WINDOW
 > Statistics by Class:
 
                      |Class: BRICKFACE |Class: CEMENT |Class: FOLIAGE
------------------------------------------------------------------
+--------------------|------------------|--------------|-------------
 Sensitivity                    |1.0000       |0.66667         |1.0000  
 Specificity                    |0.9444       |1.00000         |1.0000  
 Pos Pred Value                 |0.7143       |1.00000         |1.0000  
@@ -53,8 +53,9 @@ Prevalence                     |0.1220       |0.14634         |0.1463
 Detection Rate                 |0.1220       |0.09756         |0.1463  
 Detection Prevalence           |0.1707       |0.09756         |0.1463  
 Balanced Accuracy              |0.9722       |0.83333         |1.0000  
+
                      |Class: GRASS |Class: PATH |Class: SKY |Class: WINDOW
------------------------------------------------------------------
+---------------------|-------------|------------|-----------|-------
 Sensitivity                |1.0000      |1.0000     |1.0000        |0.8333  
 Specificity                |1.0000      |1.0000     |1.0000        |0.9714  
 Pos Pred Value             |1.0000      |1.0000     |1.0000        |0.8333  
