@@ -20,7 +20,7 @@ I take the data and use the Random Forest, K Nearest Neighbour, and Support Vect
 * These are the results of the Random Forest model. This shows the predictions vs. the test data, with very good results. With a larger training data set I think the three misclassifications would go away.
 
 
-|Reference||||||
+Results Matrix|Reference||||||
 Prediction |BRICKFACE |CEMENT |FOLIAGE |GRASS |PATH |SKY |WINDOW
 -----------|----------|-------|--------|------|-----|----|-------
 BRICKFACE         |5      |1       |0     |0    |0   |0      |1
@@ -70,7 +70,7 @@ Balanced Accuracy          |1.0000      |1.0000     |1.0000        |0.9024
 * See the full code to see each step, it is commented pretty well.
 https://bitbucket.org/szahanov/fizzbuzz/src/master/image_classification.R
 
-### Visualizing the data ###
+### Visualizing the data - before modelling ###
 
 * These are the plots that were created to visualize the diffrent image classes before creating the prediction models:  
 * Each coloured group of points is a different category (e.g. brickface, sky, foliage, etc). Since they don't always overlap I get the impression that I can work with this.  
