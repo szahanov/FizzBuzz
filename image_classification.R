@@ -102,7 +102,7 @@ print(fit.rf)
 # test the model
 #predictions <- predict(fit.rf, validation)
 #confusionMatrix(predictions, validation$ImageBackground)
-predictions <- predict(fit.rf, image_test)
+predictions <- predict(fit.rf, image_test[,2:20])
 confusionMatrix(predictions, image_test$ImageBackground)
 
 # looking good
