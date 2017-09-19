@@ -1,6 +1,6 @@
 # Predicting image types using three different classification/regression algorithms #
 
-This work is inspired by the idea of a [FizzBuzz program](https://imranontech.com/2007/01/24/using-fizzbuzz-to-find-developers-who-grok-coding/) used to find hirable developers, I was wondering what the data science equivalent of a FizzBuzz program would be and did this.
+This is a [FizzBuzz](https://imranontech.com/2007/01/24/using-fizzbuzz-to-find-developers-who-grok-coding/)-like project but for data science.
 
 Data is taken from here: https://archive.ics.uci.edu/ml/datasets/Image+Segmentation  
 That has data for images that fall into 7 categories: brickface, sky, foliage, cement, window, path, and grass
@@ -16,52 +16,52 @@ I take the data and use the Random Forest, K Nearest Neighbour, and Support Vect
 
 ![results chart](https://raw.githubusercontent.com/szahanov/FizzBuzz/master/charts/dotplot1.png "Results for each model")
 
-* These are the results of the Random Forest model. This shows the predictions vs. the test data, with very good results. With a larger training data set I think the three misclassifications would go away.
+* These are the results of the Random Forest model. This shows the predictions vs. the test data, with very good results.
 
 Results Matrix|Reference|. |. |. |. |. |.
 -----------|----------|-------|--------|------|-----|----|-------
 Prediction |BRICKFACE |CEMENT |FOLIAGE |GRASS |PATH |SKY |WINDOW
-BRICKFACE         |5      |1       |0     |0    |0   |0      |1
-CEMENT            |0      |4       |0     |0    |0   |0      |0
-FOLIAGE           |0      |0       |6     |0    |0   |0      |0
-GRASS             |0      |0       |0     |6    |0   |0      |0
-PATH              |0      |0       |0     |0    |6   |0      |0
-SKY               |0      |0       |0     |0    |0   |6      |0
-WINDOW            |0      |1       |0     |0    |0   |0      |5
+  BRICKFACE        |29      |0       |0     |0    |0   |0      |0
+  CEMENT            |0     |30       |0     |0    |0   |0      |0
+  FOLIAGE           |0      |0      |30     |0    |0   |0      |0
+  GRASS             |0      |0       |0    |30    |0   |0      |0
+  PATH              |0      |0       |0     |0   |30   |0      |0
+  SKY               |0      |0       |0     |0    |0  |30      |0
+  WINDOW            |0      |0       |0     |0    |0   |0     |30
 
 > Overall Statistics
-                                          
->                Accuracy : 0.9268          
->                  95% CI : (0.8008, 0.9846)  
->     No Information Rate : 0.1463          
->     P-Value [Acc > NIR] : < 2.2e-16       
-                                          
->                   Kappa : 0.9147          
->  Mcnemar's Test P-Value : NA              
+         
+>                Accuracy : 1          
+>                  95% CI : (0.9825, 1)
+>     No Information Rate : 0.1435     
+>     P-Value [Acc > NIR] : < 2.2e-16  
+        
+>                   Kappa : 1          
+>  Mcnemar's Test P-Value : NA         
 
 > Statistics by Class:
 
-|Class: BRICKFACE |Class: CEMENT |Class: FOLIAGE
+|Class: BRICKFACE |Class: CEMENT |Class: FOLIAGE |.
 --------------------|------------------|--------------|-------------
-Sensitivity                    |1.0000       |0.66667         |1.0000
-Specificity                    |0.9444       |1.00000         |1.0000
-Pos Pred Value                 |0.7143       |1.00000         |1.0000
-Neg Pred Value                 |1.0000       |0.94595         |1.0000
-Prevalence                     |0.1220       |0.14634         |0.1463
-Detection Rate                 |0.1220       |0.09756         |0.1463
-Detection Prevalence           |0.1707       |0.09756         |0.1463
-Balanced Accuracy              |0.9722       |0.83333         |1.0000
+Sensitivity                    |1.0000        |1.0000         |1.0000       |1.0000
+Specificity                    |1.0000        |1.0000         |1.0000       |1.0000
+Pos Pred Value                 |1.0000        |1.0000         |1.0000       |1.0000
+Neg Pred Value                 |1.0000        |1.0000         |1.0000       |1.0000
+Prevalence                     |0.1388        |0.1435         |0.1435       |0.1435
+Detection Rate                 |0.1388        |0.1435         |0.1435       |0.1435
+Detection Prevalence           |0.1388        |0.1435         |0.1435       |0.1435
+Balanced Accuracy              |1.0000        |1.0000         |1.0000       |1.0000
 
-|Class: GRASS |Class: PATH |Class: SKY |Class: WINDOW
+|Class: GRASS |Class: PATH |Class: SKY |Class: WINDOW |.
 ---------------------|-------------|------------|-----------|-------
-Sensitivity                |1.0000      |1.0000     |1.0000        |0.8333
-Specificity                |1.0000      |1.0000     |1.0000        |0.9714
-Pos Pred Value             |1.0000      |1.0000     |1.0000        |0.8333
-Neg Pred Value             |1.0000      |1.0000     |1.0000        |0.9714
-Prevalence                 |0.1463      |0.1463     |0.1463        |0.1463
-Detection Rate             |0.1463      |0.1463     |0.1463        |0.1220
-Detection Prevalence       |0.1463      |0.1463     |0.1463        |0.1463
-Balanced Accuracy          |1.0000      |1.0000     |1.0000        |0.9024
+Sensitivity               |1.0000     |1.0000        |1.0000
+Specificity               |1.0000     |1.0000        |1.0000
+Pos Pred Value            |1.0000     |1.0000        |1.0000
+Neg Pred Value            |1.0000     |1.0000        |1.0000
+Prevalence                |0.1435     |0.1435        |0.1435
+Detection Rate            |0.1435     |0.1435        |0.1435
+Detection Prevalence      |0.1435     |0.1435        |0.1435
+Balanced Accuracy         |1.0000     |1.0000        |1.0000
 
 # Steps #
 
@@ -88,7 +88,9 @@ https://github.com/szahanov/FizzBuzz/blob/master/image_classification.R
 
 * [R code](https://github.com/szahanov/FizzBuzz/blob/master/image_classification.R)
 
-* [Data](https://github.com/szahanov/FizzBuzz/blob/master/segmentation_modified.data?at=master&fileviewer=file-view-default)
+* [Training Data](https://github.com/szahanov/FizzBuzz/blob/master/segmentation_modified.data?at=master&fileviewer=file-view-default)
+
+* [Test Data](https://github.com/szahanov/FizzBuzz/blob/master/segmentation_modified.test?at=master&fileviewer=file-view-default)
 
 * [Charts](https://github.com/szahanov/FizzBuzz/blob/master/charts/)
 

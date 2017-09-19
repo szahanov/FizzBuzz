@@ -9,17 +9,25 @@
 image<- read.csv("segmentation_modified.data")
 names(image) <- c("ImageBackground", "region-centroid-col", "region-centroid-row", "region-pixel-count", "short-line-density-5", "short-line-density-2", "vedge-mean", "vegde-sd", "hedge-mean", "hedge-sd", "intensity-mean", "rawred-mean", "rawblue-mean", "rawgreen-mean", "exred-mean", "exblue-mean", "exgreen-mean", "value-mean", "saturation-mean", "hue-mean")
 
+# Import the test dataset
+# image_test <- read.csv(url("https://archive.ics.uci.edu/ml/machine-learning-databases/image/segmentation.test"), header = FALSE)
+# Removed the first few rows
+image_test<- read.csv("segmentation_modified.data")
+names(image_test) <- c("ImageBackground", "region-centroid-col", "region-centroid-row", "region-pixel-count", "short-line-density-5", "short-line-density-2", "vedge-mean", "vegde-sd", "hedge-mean", "hedge-sd", "intensity-mean", "rawred-mean", "rawblue-mean", "rawgreen-mean", "exred-mean", "exblue-mean", "exgreen-mean", "value-mean", "saturation-mean", "hue-mean")
 
 # Requires these packages, make sure to install them and load them
+# install.packages('caret', dependencies=FALSE) # If the package has not already been installed
 library(caret)	# load package
+# install.packages('e1071', dependencies=FALSE) # If the package has not already been installed
 library(e1071)	# load package
 
 # Split up the dataset into training and testing sets
-validation_index <- createDataPartition(image$ImageBackground, p=0.80, list=FALSE)
+#validation_index <- createDataPartition(image$ImageBackground, p=0.80, list=FALSE)
 # 80% is for training
-validation <- image[-validation_index,]
+#validation <- image[-validation_index,]
 # The other 20% is for testing
-dataset <- image[validation_index,]
+#dataset <- image[validation_index,]
+dataset <- image
 
 # Take a look at the data
 summary(dataset)
@@ -92,8 +100,12 @@ dotplot(results)
 print(fit.rf)
 
 # test the model
-predictions <- predict(fit.rf, validation)
-confusionMatrix(predictions, validation$ImageBackground)
+#predictions <- predict(fit.rf, validation)
+#confusionMatrix(predictions, validation$ImageBackground)
+predictions <- predict(fit.rf, image_test)
+confusionMatrix(predictions, image_test$ImageBackground)
 
 # looking good
 
+
+##### see here - https://stats.stackexchange.com/questions/273907/how-to-perform-classification-using-function-train-in-caret-in-r
