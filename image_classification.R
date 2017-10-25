@@ -1,6 +1,9 @@
 
 #### Section 1 - Clean the data, load the data
 
+# Set the working directory
+setwd("C:/R/Image classification")
+
 # Dataset: https://archive.ics.uci.edu/ml/datasets/Image+Segmentation
 
 # Import the dataset and give names to the fields
